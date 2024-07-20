@@ -17,7 +17,7 @@ async function sendPostRequest(urlexploit, data, urlToken) {
 
     // Step 3: Send the POST request with the CSRF token and cookies
     const postResponse = await fetch(urlexploit, {
-      method: 'PUT',
+      method: 'POST',
       credentials: 'include', // Include cookies in the request
       headers: {
         'Content-Type': 'application/json',
