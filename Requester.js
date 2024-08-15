@@ -3,7 +3,7 @@ async function sendRequests() {
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
         // Execute POST request
-        await fetch('https://msul.freshservice.com/itil/requesters/59000040145/make_agent', {
+        await fetch('https://h1-h1.freshservice.com/itil/requesters/59000040420/make_agent', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -14,14 +14,14 @@ async function sendRequests() {
         });
 
         // Execute PUT request
-        await fetch('https://msul.freshservice.com/api/_/agents/59000040145/map_workspace_groups_and_roles', {
+        await fetch('https://h1-h1.freshservice.com/api/_/agents/59000040420/map_workspace_groups_and_roles', {
             method: 'PUT',
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
                 'X-Csrf-Token': csrfToken
             },
-            body: `{"observer_of":[],"member_of":[],"roles":[{"role_id":59000018262,"assignment_scope":"entire_helpdesk"}],"workspace_id":1}`
+            body: `{"observer_of":[],"member_of":[],"roles":[{"role_id":59000018699,"assignment_scope":"entire_helpdesk"}],"workspace_id":1}`
         });
 
         console.log('Requests completed successfully');
