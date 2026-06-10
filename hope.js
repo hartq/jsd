@@ -4,7 +4,7 @@ async function sendRequests() {
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
         // Execute PUT request that convert Agent ==> account admin
-        await fetch('https://ha1.freshservice.com/api/_/agents/40002089370/map_workspace_groups_and_roles', {
+        await fetch('https://ha1.freshservice.com/api/_/agents/40000141597/map_workspace_groups_and_roles', {
             method: 'PUT',
             credentials: 'include',
             headers: {
